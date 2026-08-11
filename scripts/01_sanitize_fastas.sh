@@ -27,7 +27,6 @@ sanitize_single_fasta() {
 export CLEAN_DIR
 export -f sanitize_single_fasta
 
-find "$RAW_DIR" -type f \( -name "*.fasta" -o -name "*.fna" -o -name "*.fa" \) | \
-    parallel -j "$THREADS" --progress sanitize_single_fasta {}
+find "$RAW_DIR" -type f \( -name "*.fasta" -o -name "*.fna" -o -name "*.fa" \) |     parallel -j "$THREADS" --progress sanitize_single_fasta {}
 
 echo "==> Sanitización completada."
