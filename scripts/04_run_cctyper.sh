@@ -10,6 +10,9 @@ PASS_DIR="$HOME/data/fasta_pass"
 OUTPUT_DIR="$HOME/data/cctyper_results"
 THREADS=8
 
+# Ruta absoluta al ejecutable de cctyper en el entorno conda
+CCTYPER_BIN="$HOME/miniforge3/envs/bioinfo/bin/cctyper"
+
 mkdir -p "$OUTPUT_DIR"
 
 echo "==> Iniciando minería del Spacerome con cctyper v1.8.0..."
@@ -23,8 +26,7 @@ run_sample() {
     local out_dir="$HOME/data/cctyper_results/$sample_id"
 
     if [ ! -d "$out_dir" ]; then
-        source "$HOME/miniforge3/bin/activate" bioinfo
-        cctyper "$fasta_path" "$out_dir" --threads 1 --no_plot > /dev/null 2>&1
+        "$HOME/miniforge3/envs/bioinfo/bin/cctyper" "$fasta_path" "$out_dir" --threads 1 --no_plot > /dev/null 2>&1
     fi
 }
 
