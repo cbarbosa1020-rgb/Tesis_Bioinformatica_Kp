@@ -8,10 +8,8 @@ set -euo pipefail
 
 PASS_DIR="$HOME/data/fasta_pass"
 OUTPUT_DIR="$HOME/data/cctyper_results"
+DB_DIR="$HOME/miniforge3/envs/bioinfo/cct_data"
 THREADS=8
-
-# Ruta absoluta al ejecutable de cctyper en el entorno conda
-CCTYPER_BIN="$HOME/miniforge3/envs/bioinfo/bin/cctyper"
 
 mkdir -p "$OUTPUT_DIR"
 
@@ -26,7 +24,7 @@ run_sample() {
     local out_dir="$HOME/data/cctyper_results/$sample_id"
 
     if [ ! -d "$out_dir" ]; then
-        "$HOME/miniforge3/envs/bioinfo/bin/cctyper" "$fasta_path" "$out_dir" --threads 1 --no_plot > /dev/null 2>&1
+        /root/miniforge3/envs/bioinfo/bin/cctyper "$fasta_path" "$out_dir" --db /root/miniforge3/envs/bioinfo/cct_data --threads 1 --no_plot > /dev/null 2>&1
     fi
 }
 
