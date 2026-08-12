@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ==============================================================================
 # 04_run_cctyper.sh
-# Caracterizacion masiva del Spacerome y subtipos Cas con CRISPRCasTyper v1.8.0
+# Caracterización masiva del Spacerome con CRISPRCasTyper v1.8.0
 # ==============================================================================
 
 set -euo pipefail
@@ -12,28 +12,18 @@ THREADS=8
 
 mkdir -p "$OUTPUT_DIR"
 
-echo "==> Iniciando mineración del Spacerome con cctyper v1.8.0..."
+echo "==> Iniciando minería del Spacerome con cctyper v1.8.0..."
 echo "==> Genomas a procesar: $PASS_DIR"
 echo "==> Destino: $OUTPUT_DIR"
 
-run_cctyper_single() {
-    local fasta_file="$1"
-    local base_name
-    base_name=$(basename "$fasta_file")
-    local sample_id="${base_name%.*}"
-    local sample_out="$OUTPUT_DIR/${sample_id}"
-
-    # Evitar re-procesar si ya existe la carpeta de la muestra
-    if [ ! -d "$sample_out" ]; then
-        cctyper "$fasta_file" "$sample_out" --threads 1 --no_plot > /dev/null 2>&1
-    fi
-}
-
-export OUTPUT_DIR
-export -f run_cctyper_single
-
-# Ejecucion en paralelo a 8 hilos
+# Ejecución directa en paralelo llamando a cctyper por archivo
 find "$PASS_DIR" -type f -name "*.fasta" | \
-    parallel -j "$THREADS" --progress run_cctyper_single {}
+    parallel -j "$THREADS" --progress '
+        sample_id=$(basename {} .fasta)
+        out_dir="'"$OUTPUT_DIR"'/$sample_id"
+        if [ ! -d "$out_dir" ]; then
+            cctyper {} "$out_dir" --threads 1 --no_plot > /dev/null 2>&1
+        fi
+    '
 
 echo "==> Minería de CRISPRCasTyper completada."
