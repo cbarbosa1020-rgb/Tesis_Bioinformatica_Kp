@@ -8,33 +8,24 @@ set -euo pipefail
 
 PASS_DIR="$HOME/data/fasta_pass"
 OUTPUT_DIR="$HOME/data/cctyper_results"
-THREADS=8
-
-# Rutas absolutas a los binarios para evitar fallos de PATH en subshells
 PARALLEL_BIN="$HOME/miniforge3/envs/bioinfo/bin/parallel"
 CCTYPER_BIN="$HOME/miniforge3/envs/bioinfo/bin/cctyper"
 DB_DIR="$HOME/miniforge3/envs/bioinfo/cct_data"
+THREADS=8
 
 mkdir -p "$OUTPUT_DIR"
 
 echo "==> Iniciando minería del Spacerome con cctyper v1.8.0..."
-echo "==> Genomas a procesar: $PASS_DIR"
-echo "==> Destino: $OUTPUT_DIR"
 
-run_sample() {
-    local fasta_path="$1"
-    local sample_id
-    sample_id=$(basename "$fasta_path" .fasta)
-    local out_dir="$HOME/data/cctyper_results/$sample_id"
-
-    if [ ! -d "$out_dir" ]; then
-        /root/miniforge3/envs/bioinfo/bin/cctyper "$fasta_path" "$out_dir" --db /root/miniforge3/envs/bioinfo/cct_data --threads 1 --no_plot > /dev/null 2>&1
-    fi
-}
-
-export -f run_sample
+export CCTYPER_BIN DB_DIR OUTPUT_DIR
 
 find "$PASS_DIR" -type f -name "*.fasta" | \
-    "$PARALLEL_BIN" -j "$THREADS" run_sample {}
+    "$PARALLEL_BIN" -j "$THREADS" --progress '
+        sample=$(basename {} .fasta)
+        out="'"$OUTPUT_DIR"'/$sample"
+        if [ ! -f "$out/cas_operons.tab" ]; then
+            '"$CCTYPER_BIN"' {} "$out" --db '"$DB_DIR"' --threads 1 --no_plot > /dev/null 2>&1
+        fi
+    '
 
 echo "==> Minería de CRISPRCasTyper completada."
