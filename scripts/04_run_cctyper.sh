@@ -8,8 +8,12 @@ set -euo pipefail
 
 PASS_DIR="$HOME/data/fasta_pass"
 OUTPUT_DIR="$HOME/data/cctyper_results"
-DB_DIR="$HOME/miniforge3/envs/bioinfo/cct_data"
 THREADS=8
+
+# Rutas absolutas a los binarios para evitar fallos de PATH en subshells
+PARALLEL_BIN="$HOME/miniforge3/envs/bioinfo/bin/parallel"
+CCTYPER_BIN="$HOME/miniforge3/envs/bioinfo/bin/cctyper"
+DB_DIR="$HOME/miniforge3/envs/bioinfo/cct_data"
 
 mkdir -p "$OUTPUT_DIR"
 
@@ -31,6 +35,6 @@ run_sample() {
 export -f run_sample
 
 find "$PASS_DIR" -type f -name "*.fasta" | \
-    parallel -j "$THREADS" --progress run_sample {}
+    "$PARALLEL_BIN" -j "$THREADS" run_sample {}
 
 echo "==> Minería de CRISPRCasTyper completada."
