@@ -1,0 +1,59 @@
+==> Iniciando minería del Spacerome con cctyper v1.8.0...
+parallel: SIGHUP received. No new jobs will be started.
+parallel: Waiting for these 8 jobs to finish. Send SIGTERM to stop now.
+parallel: 
+        sample=$(basename /root/data/fasta_pass/573.21519.fasta .fasta)
+        out="/root/data/cctyper_results/$sample"
+        if [ ! -f "$out/hmmer.log" ]; then
+            /root/miniforge3/envs/bioinfo/bin/cctyper /root/data/fasta_pass/573.21519.fasta "$out" --db /root/miniforge3/envs/bioinfo/cct_data --threads 1 --no_plot > /dev/null 2>&1
+        fi
+    
+parallel: 
+        sample=$(basename /root/data/fasta_pass/573.32173.fasta .fasta)
+        out="/root/data/cctyper_results/$sample"
+        if [ ! -f "$out/hmmer.log" ]; then
+            /root/miniforge3/envs/bioinfo/bin/cctyper /root/data/fasta_pass/573.32173.fasta "$out" --db /root/miniforge3/envs/bioinfo/cct_data --threads 1 --no_plot > /dev/null 2>&1
+        fi
+    
+parallel: 
+        sample=$(basename /root/data/fasta_pass/573.68145.fasta .fasta)
+        out="/root/data/cctyper_results/$sample"
+        if [ ! -f "$out/hmmer.log" ]; then
+            /root/miniforge3/envs/bioinfo/bin/cctyper /root/data/fasta_pass/573.68145.fasta "$out" --db /root/miniforge3/envs/bioinfo/cct_data --threads 1 --no_plot > /dev/null 2>&1
+        fi
+    
+parallel: 
+        sample=$(basename /root/data/fasta_pass/573.77891.fasta .fasta)
+        out="/root/data/cctyper_results/$sample"
+        if [ ! -f "$out/hmmer.log" ]; then
+            /root/miniforge3/envs/bioinfo/bin/cctyper /root/data/fasta_pass/573.77891.fasta "$out" --db /root/miniforge3/envs/bioinfo/cct_data --threads 1 --no_plot > /dev/null 2>&1
+        fi
+    
+parallel: 
+        sample=$(basename /root/data/fasta_pass/573.49591.fasta .fasta)
+        out="/root/data/cctyper_results/$sample"
+        if [ ! -f "$out/hmmer.log" ]; then
+            /root/miniforge3/envs/bioinfo/bin/cctyper /root/data/fasta_pass/573.49591.fasta "$out" --db /root/miniforge3/envs/bioinfo/cct_data --threads 1 --no_plot > /dev/null 2>&1
+        fi
+    
+parallel: 
+        sample=$(basename /root/data/fasta_pass/573.46262.fasta .fasta)
+        out="/root/data/cctyper_results/$sample"
+        if [ ! -f "$out/hmmer.log" ]; then
+            /root/miniforge3/envs/bioinfo/bin/cctyper /root/data/fasta_pass/573.46262.fasta "$out" --db /root/miniforge3/envs/bioinfo/cct_data --threads 1 --no_plot > /dev/null 2>&1
+        fi
+    
+parallel: 
+        sample=$(basename /root/data/fasta_pass/573.67165.fasta .fasta)
+        out="/root/data/cctyper_results/$sample"
+        if [ ! -f "$out/hmmer.log" ]; then
+            /root/miniforge3/envs/bioinfo/bin/cctyper /root/data/fasta_pass/573.67165.fasta "$out" --db /root/miniforge3/envs/bioinfo/cct_data --threads 1 --no_plot > /dev/null 2>&1
+        fi
+    
+parallel: 
+        sample=$(basename /root/data/fasta_pass/573.54736.fasta .fasta)
+        out="/root/data/cctyper_results/$sample"
+        if [ ! -f "$out/hmmer.log" ]; then
+            /root/miniforge3/envs/bioinfo/bin/cctyper /root/data/fasta_pass/573.54736.fasta "$out" --db /root/miniforge3/envs/bioinfo/cct_data --threads 1 --no_plot > /dev/null 2>&1
+        fi
+    
