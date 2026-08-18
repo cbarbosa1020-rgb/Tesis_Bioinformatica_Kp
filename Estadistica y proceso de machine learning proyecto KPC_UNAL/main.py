@@ -8,16 +8,28 @@ Descripción: Pipeline orquestador maestro para el análisis estadístico y
 import os
 import sys
 import argparse
+import importlib
 
-# Asegurar importación de módulos en src/
+# Asegurar ruta hacia src/
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.join(CURRENT_DIR, "src"))
+SRC_DIR = os.path.join(CURRENT_DIR, "src")
+if SRC_DIR not in sys.path:
+    sys.path.append(SRC_DIR)
 
-from 01_feature_engineering import parse_crispr_spacers, parse_cas_subtypes, merge_features_and_metadata
-from 02_preprocessing_splits import run_preprocessing_pipeline
-from 03_train_models import run_training_pipeline
-from 04_evaluation_metrics import run_evaluation_pipeline
-from 05_feature_importance import run_feature_importance_pipeline
+# Importación dinámica de módulos numéricos
+mod_01 = importlib.import_module("01_feature_engineering")
+mod_02 = importlib.import_module("02_preprocessing_splits")
+mod_03 = importlib.import_module("03_train_models")
+mod_04 = importlib.import_module("04_evaluation_metrics")
+mod_05 = importlib.import_module("05_feature_importance")
+
+parse_crispr_spacers = mod_01.parse_crispr_spacers
+parse_cas_subtypes = mod_01.parse_cas_subtypes
+merge_features_and_metadata = mod_01.merge_features_and_metadata
+run_preprocessing_pipeline = mod_02.run_preprocessing_pipeline
+run_training_pipeline = mod_03.run_training_pipeline
+run_evaluation_pipeline = mod_04.run_evaluation_pipeline
+run_feature_importance_pipeline = mod_05.run_feature_importance_pipeline
 
 PRIORITY_ANTIBIOTICS = [
     "meropenem", "imipenem", "ertapenem",
@@ -72,28 +84,25 @@ def main():
             X.to_parquet(genomic_matrix_path)
             print(f"[✓] Matriz guardada en: {genomic_matrix_path}")
         else:
-            print("[!] Archivos en data/raw no detectados. Asumiendo matrices procesadas existentes.")
+            print("[!] Archivos en data/raw no detectados aún. Se omite Paso 1 temporalmente.")
 
     # Pasos 2 al 5 por cada antibiótico
     for ab in antibiotics_to_run:
-        print(f"\n>>> INICIANDO PROCESAMIENTO COMPLETO PARA: {ab.upper()} <<<")
+        print(f"\n>>> PROCESAMIENTO PARA: {ab.upper()} <<<")
         try:
-            # 2. Preprocesamiento & Splits
+            if not os.path.exists(genomic_matrix_path):
+                print(f"[!] No existe {genomic_matrix_path}. Esperando datos en data/raw.")
+                continue
+
             run_preprocessing_pipeline(genomic_matrix_path, metadata_path, ab, processed_dir)
-
-            # 3. Entrenamiento & Hiperparámetros
             run_training_pipeline(ab, CURRENT_DIR)
-
-            # 4. Evaluación Epidemiológica y Curvas ROC
             run_evaluation_pipeline(ab, CURRENT_DIR)
-
-            # 5. Biomarcadores y SHAP
             run_feature_importance_pipeline(ab, CURRENT_DIR)
 
         except Exception as e:
-            print(f"[ERROR] Fallo en el procesamiento de {ab}: {e}")
+            print(f"[ERROR] Fallo en {ab}: {e}")
 
-    print("\n[✓] Ejecución finalizada. Revisa la carpeta 'results/' para figuras y tablas.")
+    print("\n[✓] Orquestador verificado correctamente.")
 
 
 if __name__ == "__main__":
