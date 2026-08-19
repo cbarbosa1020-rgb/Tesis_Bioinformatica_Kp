@@ -1,89 +1,67 @@
 """
 Proyecto: KPC_UNAL
 Script: 03_train_models.py
-Descripción: Entrenamiento y optimización de hiperparámetros vía Stratified 5-Fold CV
-             para Elastic Net, XGBoost y Decision Tree.
+Descripción: Entrenamiento y optimización de hiperparámetros (5-Fold Stratified CV)
+             para Elastic Net, XGBoost y Decision Trees.
 """
 
 import os
+import warnings
 import joblib
-import numpy as np
-import pandas as pd
-from sklearn.model_selection import StratifiedKFold, GridSearchCV
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
-import xgboost as xgb
+from xgboost import XGBClassifier
+from sklearn.model_selection import GridSearchCV, StratifiedKFold
+
+warnings.filterwarnings("ignore", category=FutureWarning)
+warnings.filterwarnings("ignore", category=UserWarning)
 
 
-def train_elastic_net(X_train: pd.DataFrame, y_train: pd.Series, cv) -> GridSearchCV:
-    """
-    Optimiza Regresión Logística con regularización Elastic Net (L1 + L2).
-    """
+def train_elastic_net(X_train, y_train):
     print("[*] Optimizando Elastic Net...")
-    model = LogisticRegression(
-        penalty="elasticnet",
-        solver="saga",
-        max_iter=3000,
-        class_weight="balanced",
-        random_state=42
-    )
     param_grid = {
-        "C": [0.01, 0.1, 1.0, 10.0],
-        "l1_ratio": [0.1, 0.5, 0.7, 0.9]
+        'C': [0.01, 0.1, 1.0, 10.0],
+        'l1_ratio': [0.1, 0.3, 0.5, 0.7]
     }
-    grid = GridSearchCV(model, param_grid, cv=cv, scoring="roc_auc", n_jobs=-1, verbose=1)
+    base_model = LogisticRegression(solver='saga', max_iter=2000, random_state=42)
+    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+    grid = GridSearchCV(base_model, param_grid, cv=cv, scoring='roc_auc', n_jobs=-1)
     grid.fit(X_train, y_train)
     print(f"    - Mejor AUC-ROC (CV): {grid.best_score_:.4f} | Params: {grid.best_params_}")
     return grid.best_estimator_
 
 
-def train_xgboost(X_train: pd.DataFrame, y_train: pd.Series, cv) -> GridSearchCV:
-    """
-    Optimiza XGBoost Classifier con ponderación de clases positivas.
-    """
+def train_xgboost(X_train, y_train):
     print("[*] Optimizando XGBoost...")
-    neg_count = (y_train == 0).sum()
-    pos_count = (y_train == 1).sum()
-    scale_weight = neg_count / max(pos_count, 1)
-
-    model = xgb.XGBClassifier(
-        scale_pos_weight=scale_weight,
-        eval_metric="logloss",
-        random_state=42,
-        tree_method="hist"
-    )
     param_grid = {
-        "max_depth": [3, 5, 7],
-        "learning_rate": [0.01, 0.05, 0.1],
-        "n_estimators": [100, 200],
-        "subsample": [0.8]
+        'n_estimators': [50, 100],
+        'max_depth': [3, 5],
+        'learning_rate': [0.01, 0.1],
+        'subsample': [0.8, 1.0]
     }
-    grid = GridSearchCV(model, param_grid, cv=cv, scoring="roc_auc", n_jobs=-1, verbose=1)
+    base_model = XGBClassifier(eval_metric='logloss', random_state=42)
+    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+    grid = GridSearchCV(base_model, param_grid, cv=cv, scoring='roc_auc', n_jobs=-1)
     grid.fit(X_train, y_train)
     print(f"    - Mejor AUC-ROC (CV): {grid.best_score_:.4f} | Params: {grid.best_params_}")
     return grid.best_estimator_
 
 
-def train_decision_tree(X_train: pd.DataFrame, y_train: pd.Series, cv) -> GridSearchCV:
-    """
-    Optimiza Árbol de Decisión como baseline interpretable.
-    """
+def train_decision_tree(X_train, y_train):
     print("[*] Optimizando Decision Tree...")
-    model = DecisionTreeClassifier(class_weight="balanced", random_state=42)
     param_grid = {
-        "max_depth": [3, 5, 8, 12],
-        "min_samples_leaf": [5, 10, 20]
+        'max_depth': [3, 5, 7],
+        'min_samples_leaf': [2, 5, 10]
     }
-    grid = GridSearchCV(model, param_grid, cv=cv, scoring="roc_auc", n_jobs=-1, verbose=1)
+    base_model = DecisionTreeClassifier(random_state=42)
+    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+    grid = GridSearchCV(base_model, param_grid, cv=cv, scoring='roc_auc', n_jobs=-1)
     grid.fit(X_train, y_train)
     print(f"    - Mejor AUC-ROC (CV): {grid.best_score_:.4f} | Params: {grid.best_params_}")
     return grid.best_estimator_
 
 
 def run_training_pipeline(antibiotic: str, base_dir: str):
-    """
-    Carga datos particionados, entrena todos los modelos y guarda los estimadores serializados.
-    """
     print(f"\n================ ENTRENANDO MODELOS: {antibiotic.upper()} ================")
     data_dir = os.path.join(base_dir, "data", "processed", antibiotic)
     models_dir = os.path.join(base_dir, "results", "models", antibiotic)
@@ -92,19 +70,16 @@ def run_training_pipeline(antibiotic: str, base_dir: str):
     X_train = joblib.load(os.path.join(data_dir, "X_train.joblib"))
     y_train = joblib.load(os.path.join(data_dir, "y_train.joblib"))
 
-    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+    en_model = train_elastic_net(X_train, y_train)
+    xgb_model = train_xgboost(X_train, y_train)
+    dt_model = train_decision_tree(X_train, y_train)
 
-    trained_models = {
-        "elastic_net": train_elastic_net(X_train, y_train, cv),
-        "xgboost": train_xgboost(X_train, y_train, cv),
-        "decision_tree": train_decision_tree(X_train, y_train, cv)
-    }
+    joblib.dump(en_model, os.path.join(models_dir, "elastic_net.joblib"))
+    joblib.dump(xgb_model, os.path.join(models_dir, "xgboost.joblib"))
+    joblib.dump(dt_model, os.path.join(models_dir, "decision_tree.joblib"))
 
-    for name, model in trained_models.items():
-        save_path = os.path.join(models_dir, f"{name}.joblib")
-        joblib.dump(model, save_path)
-        print(f"[✓] Modelo {name} guardado en: {save_path}")
+    print(f"[✓] Modelos guardados en: {models_dir}")
 
 
 if __name__ == "__main__":
-    print("[✓] Modulo 03 (Model Training & Hyperparameter Tuning) listo para integrarse.")
+    print("[✓] Modulo 03 (Model Training) optimizado.")

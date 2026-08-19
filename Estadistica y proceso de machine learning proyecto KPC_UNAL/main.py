@@ -1,8 +1,8 @@
 """
 Proyecto: KPC_UNAL
 Script: main.py
-Descripción: Pipeline orquestador maestro para el análisis estadístico y
-             modelado de Machine Learning del espacioroma de K. pneumoniae.
+Descripción: Pipeline orquestador maestro para el modelado de Machine Learning
+             del espacioroma de K. pneumoniae.
 """
 
 import os
@@ -10,13 +10,11 @@ import sys
 import argparse
 import importlib
 
-# Asegurar ruta hacia src/
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 SRC_DIR = os.path.join(CURRENT_DIR, "src")
 if SRC_DIR not in sys.path:
     sys.path.append(SRC_DIR)
 
-# Importación dinámica de módulos numéricos
 mod_01 = importlib.import_module("01_feature_engineering")
 mod_02 = importlib.import_module("02_preprocessing_splits")
 mod_03 = importlib.import_module("03_train_models")
@@ -32,10 +30,9 @@ run_evaluation_pipeline = mod_04.run_evaluation_pipeline
 run_feature_importance_pipeline = mod_05.run_feature_importance_pipeline
 
 PRIORITY_ANTIBIOTICS = [
-    "meropenem", "imipenem", "ertapenem",
-    "ceftazidime", "ceftriaxone", "cefepime",
-    "ceftazidime_avibactam", "piperacillin_tazobactam",
-    "colistin", "amikacin", "ciprofloxacin"
+    "meropenem", "imipenem", "ceftazidime", 
+    "ciprofloxacin", "cefotaxime", "gentamicin", 
+    "ampicillin", "norfloxacin", "trimethoprim_sulfamethoxazole"
 ]
 
 
@@ -45,28 +42,32 @@ def main():
         "--antibiotic", 
         type=str, 
         default="all", 
-        help="Antibiótico a evaluar (ej: 'meropenem') o 'all' para el panel completo."
+        help="Antibiótico a evaluar o 'all' para el panel completo."
     )
     parser.add_argument(
         "--min_spacer_freq", 
         type=int, 
         default=5, 
-        help="Frecuencia mínima de aparición de un espaciador para incluirlo en la matriz."
+        help="Frecuencia mínima de aparición del espaciador."
     )
     parser.add_argument(
         "--skip_feature_engineering", 
         action="store_true", 
-        help="Omitir el paso 01 si la matriz ya fue construida."
+        help="Omitir el paso 01 si las matrices ya existen."
     )
 
     args = parser.parse_args()
 
     raw_dir = os.path.join(CURRENT_DIR, "data", "raw")
     processed_dir = os.path.join(CURRENT_DIR, "data", "processed")
+    os.makedirs(processed_dir, exist_ok=True)
+
     spacers_path = os.path.join(raw_dir, "spacers.tsv")
     cas_path = os.path.join(raw_dir, "cas_subtypes.tsv")
     metadata_path = os.path.join(raw_dir, "mic_metadata.tsv")
+    
     genomic_matrix_path = os.path.join(processed_dir, "genomic_matrix.parquet")
+    phenotypes_matrix_path = os.path.join(processed_dir, "phenotypes_matrix.parquet")
 
     antibiotics_to_run = PRIORITY_ANTIBIOTICS if args.antibiotic == "all" else [args.antibiotic.lower()]
 
@@ -74,27 +75,29 @@ def main():
     print("      PIPELINE MACHINE LEARNING - PROYECTO KPC UNAL    ")
     print("=======================================================\n")
 
-    # Paso 1: Feature Engineering
+    # 1. Feature Engineering & Matrices
     if not args.skip_feature_engineering:
         if os.path.exists(spacers_path) and os.path.exists(cas_path) and os.path.exists(metadata_path):
-            print("[PASO 1] Construyendo matriz de características genómicas...")
+            print("[PASO 1] Construyendo matrices genómicas y fenotípicas...")
             df_spacers = parse_crispr_spacers(spacers_path, min_occurrence=args.min_spacer_freq)
             df_cas = parse_cas_subtypes(cas_path)
             X, y = merge_features_and_metadata(df_spacers, df_cas, metadata_path, PRIORITY_ANTIBIOTICS)
             X.to_parquet(genomic_matrix_path)
-            print(f"[✓] Matriz guardada en: {genomic_matrix_path}")
+            y.to_parquet(phenotypes_matrix_path)
+            print(f"[✓] Matriz genómica guardada en: {genomic_matrix_path}")
+            print(f"[✓] Matriz fenotípica guardada en: {phenotypes_matrix_path}")
         else:
-            print("[!] Archivos en data/raw no detectados aún. Se omite Paso 1 temporalmente.")
+            print("[!] Faltan archivos en data/raw.")
 
-    # Pasos 2 al 5 por cada antibiótico
+    # 2 al 5 por cada antibiótico
     for ab in antibiotics_to_run:
-        print(f"\n>>> PROCESAMIENTO PARA: {ab.upper()} <<<")
+        print(f"\n>>> INICIANDO MODELADO PARA: {ab.upper()} <<<")
         try:
-            if not os.path.exists(genomic_matrix_path):
-                print(f"[!] No existe {genomic_matrix_path}. Esperando datos en data/raw.")
+            if not os.path.exists(genomic_matrix_path) or not os.path.exists(phenotypes_matrix_path):
+                print("[!] No existen matrices procesadas.")
                 continue
 
-            run_preprocessing_pipeline(genomic_matrix_path, metadata_path, ab, processed_dir)
+            run_preprocessing_pipeline(genomic_matrix_path, phenotypes_matrix_path, ab, processed_dir)
             run_training_pipeline(ab, CURRENT_DIR)
             run_evaluation_pipeline(ab, CURRENT_DIR)
             run_feature_importance_pipeline(ab, CURRENT_DIR)
@@ -102,7 +105,7 @@ def main():
         except Exception as e:
             print(f"[ERROR] Fallo en {ab}: {e}")
 
-    print("\n[✓] Orquestador verificado correctamente.")
+    print("\n[✓] Pipeline ejecutado.")
 
 
 if __name__ == "__main__":
