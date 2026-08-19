@@ -1,0 +1,4 @@
+Antibiotic,Model,AUC_ROC,Sensitivity,Specificity,F1_Score,Accuracy,TP,FP,TN,FN
+meropenem,Elastic_Net,0.5624,0.8333,0.2593,0.6832,0.575,55,40,14,11
+meropenem,XGBoost,0.5943,0.9091,0.2407,0.7186,0.6083,60,41,13,6
+meropenem,Decision_Tree,0.5983,0.9091,0.2407,0.7186,0.6083,60,41,13,6

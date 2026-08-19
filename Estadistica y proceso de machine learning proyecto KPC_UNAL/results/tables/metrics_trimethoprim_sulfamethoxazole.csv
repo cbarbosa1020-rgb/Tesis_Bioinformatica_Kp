@@ -1,0 +1,4 @@
+Antibiotic,Model,AUC_ROC,Sensitivity,Specificity,F1_Score,Accuracy,TP,FP,TN,FN
+trimethoprim_sulfamethoxazole,Elastic_Net,0.5,0.0,1.0,0.0,0.225,0,0,27,93
+trimethoprim_sulfamethoxazole,XGBoost,0.5617,0.9462,0.1852,0.867,0.775,88,22,5,5
+trimethoprim_sulfamethoxazole,Decision_Tree,0.5607,0.9462,0.1852,0.867,0.775,88,22,5,5

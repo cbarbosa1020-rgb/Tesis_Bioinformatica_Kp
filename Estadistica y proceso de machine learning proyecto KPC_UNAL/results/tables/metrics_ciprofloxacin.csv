@@ -1,0 +1,4 @@
+Antibiotic,Model,AUC_ROC,Sensitivity,Specificity,F1_Score,Accuracy,TP,FP,TN,FN
+ciprofloxacin,Elastic_Net,0.464,0.8588,0.1143,0.7725,0.6417,73,31,4,12
+ciprofloxacin,XGBoost,0.5185,0.7882,0.2571,0.7528,0.6333,67,26,9,18
+ciprofloxacin,Decision_Tree,0.5099,0.9647,0.0571,0.82,0.7,82,33,2,3

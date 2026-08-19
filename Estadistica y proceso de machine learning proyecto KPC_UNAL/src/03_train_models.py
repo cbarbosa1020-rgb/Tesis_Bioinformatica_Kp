@@ -1,13 +1,14 @@
 """
 Proyecto: KPC_UNAL
 Script: 03_train_models.py
-Descripción: Entrenamiento y optimización de hiperparámetros (5-Fold Stratified CV)
-             para Elastic Net, XGBoost y Decision Trees.
+Descripción: Entrenamiento con balanceo de clases (class_weight='balanced' y scale_pos_weight)
+             y optimización por 5-Fold Stratified CV para mitigar desbalance clínico.
 """
 
 import os
 import warnings
 import joblib
+import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from xgboost import XGBClassifier
@@ -18,12 +19,18 @@ warnings.filterwarnings("ignore", category=UserWarning)
 
 
 def train_elastic_net(X_train, y_train):
-    print("[*] Optimizando Elastic Net...")
+    print("[*] Optimizando Elastic Net (Balanced)...")
     param_grid = {
         'C': [0.01, 0.1, 1.0, 10.0],
         'l1_ratio': [0.1, 0.3, 0.5, 0.7]
     }
-    base_model = LogisticRegression(solver='saga', max_iter=2000, random_state=42)
+    base_model = LogisticRegression(
+        solver='saga', 
+        penalty='elasticnet', 
+        class_weight='balanced', 
+        max_iter=2000, 
+        random_state=42
+    )
     cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
     grid = GridSearchCV(base_model, param_grid, cv=cv, scoring='roc_auc', n_jobs=-1)
     grid.fit(X_train, y_train)
@@ -32,14 +39,22 @@ def train_elastic_net(X_train, y_train):
 
 
 def train_xgboost(X_train, y_train):
-    print("[*] Optimizando XGBoost...")
+    print("[*] Optimizando XGBoost (Balanced scale_pos_weight)...")
+    n_neg = (y_train == 0).sum()
+    n_pos = (y_train == 1).sum()
+    scale_weight = float(n_neg) / float(n_pos) if n_pos > 0 else 1.0
+
     param_grid = {
         'n_estimators': [50, 100],
         'max_depth': [3, 5],
         'learning_rate': [0.01, 0.1],
         'subsample': [0.8, 1.0]
     }
-    base_model = XGBClassifier(eval_metric='logloss', random_state=42)
+    base_model = XGBClassifier(
+        eval_metric='logloss', 
+        scale_pos_weight=scale_weight, 
+        random_state=42
+    )
     cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
     grid = GridSearchCV(base_model, param_grid, cv=cv, scoring='roc_auc', n_jobs=-1)
     grid.fit(X_train, y_train)
@@ -48,12 +63,12 @@ def train_xgboost(X_train, y_train):
 
 
 def train_decision_tree(X_train, y_train):
-    print("[*] Optimizando Decision Tree...")
+    print("[*] Optimizando Decision Tree (Balanced)...")
     param_grid = {
         'max_depth': [3, 5, 7],
         'min_samples_leaf': [2, 5, 10]
     }
-    base_model = DecisionTreeClassifier(random_state=42)
+    base_model = DecisionTreeClassifier(class_weight='balanced', random_state=42)
     cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
     grid = GridSearchCV(base_model, param_grid, cv=cv, scoring='roc_auc', n_jobs=-1)
     grid.fit(X_train, y_train)
@@ -78,8 +93,8 @@ def run_training_pipeline(antibiotic: str, base_dir: str):
     joblib.dump(xgb_model, os.path.join(models_dir, "xgboost.joblib"))
     joblib.dump(dt_model, os.path.join(models_dir, "decision_tree.joblib"))
 
-    print(f"[✓] Modelos guardados en: {models_dir}")
+    print(f"[✓] Modelos balanceados guardados en: {models_dir}")
 
 
 if __name__ == "__main__":
-    print("[✓] Modulo 03 (Model Training) optimizado.")
+    print("[✓] Modulo 03 optimizado con balanceo de clases.")

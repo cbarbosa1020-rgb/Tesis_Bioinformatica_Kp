@@ -1,0 +1,4 @@
+Antibiotic,Model,AUC_ROC,Sensitivity,Specificity,F1_Score,Accuracy,TP,FP,TN,FN
+gentamicin,Elastic_Net,0.5895,0.1786,0.9167,0.2941,0.4,15,3,33,69
+gentamicin,XGBoost,0.5966,0.1786,0.9167,0.2941,0.4,15,3,33,69
+gentamicin,Decision_Tree,0.5937,0.1786,0.9167,0.2941,0.4,15,3,33,69

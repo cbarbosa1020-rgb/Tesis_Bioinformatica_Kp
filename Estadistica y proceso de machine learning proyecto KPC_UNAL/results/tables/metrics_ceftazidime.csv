@@ -1,0 +1,4 @@
+Antibiotic,Model,AUC_ROC,Sensitivity,Specificity,F1_Score,Accuracy,TP,FP,TN,FN
+ceftazidime,Elastic_Net,0.6133,0.9298,0.1667,0.9422,0.8917,106,5,1,8
+ceftazidime,XGBoost,0.4781,0.7895,0.1667,0.8612,0.7583,90,5,1,24
+ceftazidime,Decision_Tree,0.5928,0.9737,0.1667,0.9652,0.9333,111,5,1,3
