@@ -1,202 +1,202 @@
-Antibiotic,Feature,Clinical_Effect,Odds_Ratio,SHAP_Value,pident,length,evalue,sseqid,stitle
-Ceftazidime,Spacer_Cluster_421,Protector (Sensibilidad),0.0551130525197708,,,,,,
-Ceftazidime,Spacer_Cluster_67,Protector (Sensibilidad),0.0819167186918037,,,,,,
+Antibiotic,Feature,Clinical_Effect,Odds_Ratio,SHAP_Value,pident,length,evalue,bitscore,stitle
+Ceftazidime,Spacer_Cluster_421,Protector (Sensibilidad),0.0551130525197708,,100.0,36.0,4.44e-12,71.9,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_67,Protector (Sensibilidad),0.0819167186918037,,89.535,86.0,8.16e-20,99.6,"NZ_JARYIA010000006.1 Staphylococcus aureus strain GE-MSSA34 plasmid unnamed2, whole genome shotgun sequence"
 Ceftazidime,Spacer_Cluster_257,Protector (Sensibilidad),0.1130251244472943,0.0,,,,,
 Ceftazidime,Spacer_Cluster_314,Protector (Sensibilidad),0.1387969643770453,,,,,,
-Ceftazidime,Spacer_Cluster_298,Riesgo (Resistencia),4.065605521581952,,,,,,
-Ceftazidime,Spacer_Cluster_311,Riesgo (Resistencia),4.297284996291023,,,,,,
-Ceftazidime,Spacer_Cluster_248,Riesgo (Resistencia),4.499817253037567,0.0,,,,,
-Ceftazidime,Spacer_Cluster_281,Riesgo (Resistencia),4.516794851003525,,,,,,
-Ceftazidime,Spacer_Cluster_270,Riesgo (Resistencia),5.118359016805062,0.0,,,,,
+Ceftazidime,Spacer_Cluster_298,Riesgo (Resistencia),4.065605521581952,,100.0,33.0,3.03e-10,65.9,"NZ_JBSQHF010000002.1 Klebsiella pneumoniae strain L20 map unlocalized plasmid unnamed contig_3, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_311,Riesgo (Resistencia),4.297284996291023,,100.0,38.0,3.14e-13,75.8,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_248,Riesgo (Resistencia),4.499817253037567,0.0,100.0,40.0,2.2e-14,79.8,"NZ_NTGK01000110.1 Klebsiella pneumoniae strain B04 map unlocalized plasmid pB04 P51, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_281,Riesgo (Resistencia),4.516794851003525,,97.368,38.0,7.66e-11,67.9,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_270,Riesgo (Resistencia),5.118359016805062,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
 Ceftazidime,Spacer_Cluster_703,Riesgo (Resistencia),5.369598888179735,,,,,,
-Ceftazidime,Spacer_Cluster_310,Riesgo (Resistencia),5.62756757684831,,,,,,
-Ceftazidime,Spacer_Cluster_293,Riesgo (Resistencia),5.631161508541311,,,,,,
-Ceftazidime,Spacer_Cluster_148,Riesgo (Resistencia),6.032485889576779,0.0,,,,,
-Ceftazidime,Spacer_Cluster_249,Riesgo (Resistencia),6.100470837820095,0.0,,,,,
+Ceftazidime,Spacer_Cluster_310,Riesgo (Resistencia),5.62756757684831,,100.0,38.0,3.14e-13,75.8,"NZ_JBQTGO010000002.1 Klebsiella ornithinolytica strain LYG_6_1B plasmid pLYG_6_1B_290Kb, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_293,Riesgo (Resistencia),5.631161508541311,,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_148,Riesgo (Resistencia),6.032485889576779,0.0,87.302,63.0,1.06e-08,61.9,"NZ_JARYHW010000002.1 Staphylococcus aureus strain IT-MSSA51 plasmid unnamed, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_249,Riesgo (Resistencia),6.100470837820095,0.0,100.0,40.0,2.2e-14,79.8,"NZ_JBRTYH010000002.1 Klebsiella pneumoniae strain KP6 plasmid pKP6-pls1, whole genome shotgun sequence"
 Ceftazidime,Spacer_Cluster_0,Riesgo (Resistencia),6.13755053103493,0.0,,,,,
 Ceftazidime,Spacer_Cluster_7,Riesgo (Resistencia),6.2267632005678255,,,,,,
-Ceftazidime,Spacer_Cluster_29,Riesgo (Resistencia),6.303697999602538,,,,,,
-Ceftazidime,Spacer_Cluster_422,Riesgo (Resistencia),6.627876204531463,,,,,,
-Ceftazidime,Spacer_Cluster_267,Riesgo (Resistencia),7.147482726492504,0.0,,,,,
+Ceftazidime,Spacer_Cluster_29,Riesgo (Resistencia),6.303697999602538,,85.417,96.0,9.58e-14,79.8,"NZ_JACGYC010000002.1 Staphylococcus aureus strain SA2028 map unlocalized plasmid unnamed NODE_2_length_578871_cov_33.101906, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_422,Riesgo (Resistencia),6.627876204531463,,100.0,36.0,4.44e-12,71.9,"NZ_JBNGOD010000008.1 Klebsiella pneumoniae subsp. pneumoniae strain MDCL 36_2022 plasmid IncHI1B(pNDM-MAR), whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_267,Riesgo (Resistencia),7.147482726492504,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
 Ceftazidime,Spacer_Cluster_1,Riesgo (Resistencia),7.385828229380895,0.0,,,,,
-Ceftazidime,Spacer_Cluster_245,Riesgo (Resistencia),7.983094518545494,0.0,,,,,
+Ceftazidime,Spacer_Cluster_245,Riesgo (Resistencia),7.983094518545494,0.0,100.0,41.0,5.82e-15,81.8,"NZ_NTGK01000110.1 Klebsiella pneumoniae strain B04 map unlocalized plasmid pB04 P51, whole genome shotgun sequence"
 Ceftazidime,Spacer_Cluster_220,Riesgo (Resistencia),8.437477001754656,0.0,,,,,
 Ceftazidime,Spacer_Cluster_213,Riesgo (Resistencia),8.43757340949204,0.0,,,,,
-Ceftazidime,Spacer_Cluster_333,Riesgo (Resistencia),12.623264358549134,,,,,,
+Ceftazidime,Spacer_Cluster_333,Riesgo (Resistencia),12.623264358549134,,96.97,33.0,7.38e-08,58.0,"NZ_JAMOLP010000004.1 Klebsiella pneumoniae strain Z0117KP0043 plasmid pZ0117KP0043-1, whole genome shotgun sequence"
 Ceftazidime,Spacer_Cluster_110,Predictor Relevante (SHAP),,0.0,,,,,
 Ceftazidime,Spacer_Cluster_14,Predictor Relevante (SHAP),,0.0,,,,,
 Ceftazidime,Spacer_Cluster_2,Predictor Relevante (SHAP),,0.0,,,,,
-Ceftazidime,Spacer_Cluster_221,Predictor Relevante (SHAP),,0.0,,,,,
-Ceftazidime,Spacer_Cluster_229,Predictor Relevante (SHAP),,0.0,,,,,
-Ceftazidime,Spacer_Cluster_230,Predictor Relevante (SHAP),,0.0,,,,,
-Ceftazidime,Spacer_Cluster_234,Predictor Relevante (SHAP),,0.0,,,,,
-Ceftazidime,Spacer_Cluster_254,Predictor Relevante (SHAP),,0.0,,,,,
-Ceftazidime,Spacer_Cluster_265,Predictor Relevante (SHAP),,0.0,,,,,
-Ceftazidime,Spacer_Cluster_266,Predictor Relevante (SHAP),,0.0,,,,,
-Ceftazidime,Spacer_Cluster_268,Predictor Relevante (SHAP),,0.0,,,,,
-Ceftazidime,Spacer_Cluster_269,Predictor Relevante (SHAP),,0.0,,,,,
-Ceftazidime,Spacer_Cluster_271,Predictor Relevante (SHAP),,0.0,,,,,
-Ciprofloxacin,Spacer_Cluster_298,Protector (Sensibilidad),0.0300056373364558,,,,,,
+Ceftazidime,Spacer_Cluster_221,Predictor Relevante (SHAP),,0.0,100.0,45.0,2.69e-17,89.7,"NZ_JBRYHH010000001.1 Klebsiella pneumoniae strain KP4 plasmid pKP4_p1, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_229,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRTYI010000002.1 Klebsiella pneumoniae strain KP1 plasmid pKP1-rmpA2, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_230,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_234,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRYHH010000001.1 Klebsiella pneumoniae strain KP4 plasmid pKP4_p1, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_254,Predictor Relevante (SHAP),,0.0,100.0,39.0,8.33e-14,77.8,"NZ_JBRTYH010000002.1 Klebsiella pneumoniae strain KP6 plasmid pKP6-pls1, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_265,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_266,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_268,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_269,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Ceftazidime,Spacer_Cluster_271,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBRTYH010000002.1 Klebsiella pneumoniae strain KP6 plasmid pKP6-pls1, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_298,Protector (Sensibilidad),0.0300056373364558,,100.0,33.0,3.03e-10,65.9,"NZ_JBSQHF010000002.1 Klebsiella pneumoniae strain L20 map unlocalized plasmid unnamed contig_3, whole genome shotgun sequence"
 Ciprofloxacin,Spacer_Cluster_314,Protector (Sensibilidad),0.0369572765405762,0.03993145,,,,,
-Ciprofloxacin,Spacer_Cluster_336,Protector (Sensibilidad),0.0389526436829072,0.02206583,,,,,
-Ciprofloxacin,Spacer_Cluster_420,Protector (Sensibilidad),0.0683291251383445,,,,,,
+Ciprofloxacin,Spacer_Cluster_336,Protector (Sensibilidad),0.0389526436829072,0.02206583,100.0,37.0,1.18e-12,73.8,"NZ_NTGK01000110.1 Klebsiella pneumoniae strain B04 map unlocalized plasmid pB04 P51, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_420,Protector (Sensibilidad),0.0683291251383445,,100.0,36.0,4.44e-12,71.9,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
 Ciprofloxacin,Spacer_Cluster_2,Protector (Sensibilidad),0.0848099567218157,0.0,,,,,
-Ciprofloxacin,Spacer_Cluster_265,Protector (Sensibilidad),0.1111626295398643,0.0023107452,,,,,
+Ciprofloxacin,Spacer_Cluster_265,Protector (Sensibilidad),0.1111626295398643,0.0023107452,100.0,38.0,3.14e-13,75.8,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
 Ciprofloxacin,Spacer_Cluster_14,Protector (Sensibilidad),0.1301612793674121,0.0,,,,,
 Ciprofloxacin,Spacer_Cluster_7,Protector (Sensibilidad),0.1301612793674121,,,,,,
-Ciprofloxacin,Spacer_Cluster_281,Protector (Sensibilidad),0.1878401512045427,,,,,,
-Ciprofloxacin,Spacer_Cluster_271,Protector (Sensibilidad),0.292096204751714,,,,,,
+Ciprofloxacin,Spacer_Cluster_281,Protector (Sensibilidad),0.1878401512045427,,97.368,38.0,7.66e-11,67.9,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_271,Protector (Sensibilidad),0.292096204751714,,100.0,38.0,3.14e-13,75.8,"NZ_JBRTYH010000002.1 Klebsiella pneumoniae strain KP6 plasmid pKP6-pls1, whole genome shotgun sequence"
 Ciprofloxacin,Spacer_Cluster_257,Protector (Sensibilidad),0.3102528566528664,0.00226978,,,,,
 Ciprofloxacin,Spacer_Cluster_1,Protector (Sensibilidad),0.3215112512212611,0.0,,,,,
 Ciprofloxacin,Spacer_Cluster_220,Protector (Sensibilidad),0.3740336827090732,0.0,,,,,
-Ciprofloxacin,Spacer_Cluster_311,Riesgo (Resistencia),2.6117570774999908,,,,,,
+Ciprofloxacin,Spacer_Cluster_311,Riesgo (Resistencia),2.6117570774999908,,100.0,38.0,3.14e-13,75.8,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
 Ciprofloxacin,Spacer_Cluster_51,Riesgo (Resistencia),3.071626290165388,,,,,,
-Ciprofloxacin,Spacer_Cluster_248,Riesgo (Resistencia),3.3748996362711035,,,,,,
+Ciprofloxacin,Spacer_Cluster_248,Riesgo (Resistencia),3.3748996362711035,,100.0,40.0,2.2e-14,79.8,"NZ_NTGK01000110.1 Klebsiella pneumoniae strain B04 map unlocalized plasmid pB04 P51, whole genome shotgun sequence"
 Ciprofloxacin,Spacer_Cluster_332,Riesgo (Resistencia),4.804457803569006,,,,,,
-Ciprofloxacin,Spacer_Cluster_291,Riesgo (Resistencia),4.993812529470932,,,,,,
+Ciprofloxacin,Spacer_Cluster_291,Riesgo (Resistencia),4.993812529470932,,100.0,38.0,3.14e-13,75.8,"NZ_JBRTYH010000002.1 Klebsiella pneumoniae strain KP6 plasmid pKP6-pls1, whole genome shotgun sequence"
 Ciprofloxacin,Spacer_Cluster_213,Riesgo (Resistencia),5.455011174449474,0.014996476,,,,,
-Ciprofloxacin,Spacer_Cluster_266,Riesgo (Resistencia),5.62550147387989,0.0,,,,,
-Ciprofloxacin,Spacer_Cluster_424,Riesgo (Resistencia),5.954615694921062,,,,,,
-Ciprofloxacin,Spacer_Cluster_293,Riesgo (Resistencia),9.239169250626553,,,,,,
-Ciprofloxacin,Spacer_Cluster_421,Riesgo (Resistencia),9.738441026131246,,,,,,
-Ciprofloxacin,Spacer_Cluster_275,Riesgo (Resistencia),11.888154338118255,,,,,,
+Ciprofloxacin,Spacer_Cluster_266,Riesgo (Resistencia),5.62550147387989,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_424,Riesgo (Resistencia),5.954615694921062,,100.0,36.0,4.44e-12,71.9,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_293,Riesgo (Resistencia),9.239169250626553,,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_421,Riesgo (Resistencia),9.738441026131246,,100.0,36.0,4.44e-12,71.9,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_275,Riesgo (Resistencia),11.888154338118255,,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
 Ciprofloxacin,Spacer_Cluster_0,Predictor Relevante (SHAP),,0.0,,,,,
 Ciprofloxacin,Spacer_Cluster_110,Predictor Relevante (SHAP),,0.0,,,,,
-Ciprofloxacin,Spacer_Cluster_148,Predictor Relevante (SHAP),,0.0,,,,,
-Ciprofloxacin,Spacer_Cluster_221,Predictor Relevante (SHAP),,0.0,,,,,
-Ciprofloxacin,Spacer_Cluster_229,Predictor Relevante (SHAP),,0.0,,,,,
-Ciprofloxacin,Spacer_Cluster_230,Predictor Relevante (SHAP),,0.0,,,,,
-Ciprofloxacin,Spacer_Cluster_234,Predictor Relevante (SHAP),,0.0,,,,,
-Ciprofloxacin,Spacer_Cluster_245,Predictor Relevante (SHAP),,0.0,,,,,
-Ciprofloxacin,Spacer_Cluster_254,Predictor Relevante (SHAP),,0.0,,,,,
-Ciprofloxacin,Spacer_Cluster_267,Predictor Relevante (SHAP),,0.0,,,,,
-Ciprofloxacin,Spacer_Cluster_268,Predictor Relevante (SHAP),,0.0,,,,,
-Ciprofloxacin,Spacer_Cluster_29,Predictor Relevante (SHAP),,0.0037885353,,,,,
-Gentamicin,Spacer_Cluster_306,Protector (Sensibilidad),0.5954528505354136,,,,,,
+Ciprofloxacin,Spacer_Cluster_148,Predictor Relevante (SHAP),,0.0,87.302,63.0,1.06e-08,61.9,"NZ_JARYHW010000002.1 Staphylococcus aureus strain IT-MSSA51 plasmid unnamed, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_221,Predictor Relevante (SHAP),,0.0,100.0,45.0,2.69e-17,89.7,"NZ_JBRYHH010000001.1 Klebsiella pneumoniae strain KP4 plasmid pKP4_p1, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_229,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRTYI010000002.1 Klebsiella pneumoniae strain KP1 plasmid pKP1-rmpA2, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_230,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_234,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRYHH010000001.1 Klebsiella pneumoniae strain KP4 plasmid pKP4_p1, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_245,Predictor Relevante (SHAP),,0.0,100.0,41.0,5.82e-15,81.8,"NZ_NTGK01000110.1 Klebsiella pneumoniae strain B04 map unlocalized plasmid pB04 P51, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_254,Predictor Relevante (SHAP),,0.0,100.0,39.0,8.33e-14,77.8,"NZ_JBRTYH010000002.1 Klebsiella pneumoniae strain KP6 plasmid pKP6-pls1, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_267,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_268,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Ciprofloxacin,Spacer_Cluster_29,Predictor Relevante (SHAP),,0.0037885353,85.417,96.0,9.58e-14,79.8,"NZ_JACGYC010000002.1 Staphylococcus aureus strain SA2028 map unlocalized plasmid unnamed NODE_2_length_578871_cov_33.101906, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_306,Protector (Sensibilidad),0.5954528505354136,,100.0,38.0,3.14e-13,75.8,"NZ_JBPSJV010000002.1 Klebsiella variicola strain 5-4756 plasmid p_contig2, whole genome shotgun sequence"
 Gentamicin,Spacer_Cluster_703,Protector (Sensibilidad),0.617118236725213,,,,,,
 Gentamicin,Spacer_Cluster_314,Protector (Sensibilidad),0.7473684351519783,,,,,,
-Gentamicin,Spacer_Cluster_229,Protector (Sensibilidad),0.8488457591314704,0.0,,,,,
-Gentamicin,Spacer_Cluster_221,Protector (Sensibilidad),0.920626090964934,0.0,,,,,
+Gentamicin,Spacer_Cluster_229,Protector (Sensibilidad),0.8488457591314704,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRTYI010000002.1 Klebsiella pneumoniae strain KP1 plasmid pKP1-rmpA2, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_221,Protector (Sensibilidad),0.920626090964934,0.0,100.0,45.0,2.69e-17,89.7,"NZ_JBRYHH010000001.1 Klebsiella pneumoniae strain KP4 plasmid pKP4_p1, whole genome shotgun sequence"
 Gentamicin,Spacer_Cluster_213,Protector (Sensibilidad),0.9792868566222114,0.0026916056,,,,,
 Gentamicin,Spacer_Cluster_110,Riesgo (Resistencia),1.0321792836728738,0.0,,,,,
-Gentamicin,Spacer_Cluster_333,Riesgo (Resistencia),1.053793828563602,,,,,,
-Gentamicin,Spacer_Cluster_248,Riesgo (Resistencia),1.0765634197656933,0.0,,,,,
+Gentamicin,Spacer_Cluster_333,Riesgo (Resistencia),1.053793828563602,,96.97,33.0,7.38e-08,58.0,"NZ_JAMOLP010000004.1 Klebsiella pneumoniae strain Z0117KP0043 plasmid pZ0117KP0043-1, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_248,Riesgo (Resistencia),1.0765634197656933,0.0,100.0,40.0,2.2e-14,79.8,"NZ_NTGK01000110.1 Klebsiella pneumoniae strain B04 map unlocalized plasmid pB04 P51, whole genome shotgun sequence"
 Gentamicin,Spacer_Cluster_7,Riesgo (Resistencia),1.1223438604046727,,,,,,
 Gentamicin,Spacer_Cluster_51,Riesgo (Resistencia),1.1445398115301764,,,,,,
 Gentamicin,Spacer_Cluster_14,Riesgo (Resistencia),1.1662563506468135,0.0,,,,,
-Gentamicin,Spacer_Cluster_424,Riesgo (Resistencia),1.1834538269188355,,,,,,
+Gentamicin,Spacer_Cluster_424,Riesgo (Resistencia),1.1834538269188355,,100.0,36.0,4.44e-12,71.9,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
 Gentamicin,Spacer_Cluster_1,Riesgo (Resistencia),1.2768065762379683,0.0,,,,,
-Gentamicin,Spacer_Cluster_148,Riesgo (Resistencia),1.3092771832638384,0.0,,,,,
-Gentamicin,Spacer_Cluster_265,Riesgo (Resistencia),1.3668157170660735,0.0,,,,,
+Gentamicin,Spacer_Cluster_148,Riesgo (Resistencia),1.3092771832638384,0.0,87.302,63.0,1.06e-08,61.9,"NZ_JARYHW010000002.1 Staphylococcus aureus strain IT-MSSA51 plasmid unnamed, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_265,Riesgo (Resistencia),1.3668157170660735,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
 Gentamicin,Spacer_Cluster_257,Riesgo (Resistencia),1.464577507898637,0.0,,,,,
-Gentamicin,Spacer_Cluster_421,Riesgo (Resistencia),1.5452752244728354,,,,,,
-Gentamicin,Spacer_Cluster_270,Riesgo (Resistencia),1.6153915223332471,0.0,,,,,
-Gentamicin,Spacer_Cluster_281,Riesgo (Resistencia),1.7847972789325288,,,,,,
-Gentamicin,Spacer_Cluster_29,Riesgo (Resistencia),2.240496296454283,,,,,,
-Gentamicin,Spacer_Cluster_310,Riesgo (Resistencia),3.196428900199649,,,,,,
+Gentamicin,Spacer_Cluster_421,Riesgo (Resistencia),1.5452752244728354,,100.0,36.0,4.44e-12,71.9,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_270,Riesgo (Resistencia),1.6153915223332471,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_281,Riesgo (Resistencia),1.7847972789325288,,97.368,38.0,7.66e-11,67.9,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_29,Riesgo (Resistencia),2.240496296454283,,85.417,96.0,9.58e-14,79.8,"NZ_JACGYC010000002.1 Staphylococcus aureus strain SA2028 map unlocalized plasmid unnamed NODE_2_length_578871_cov_33.101906, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_310,Riesgo (Resistencia),3.196428900199649,,100.0,38.0,3.14e-13,75.8,"NZ_JBQTGO010000002.1 Klebsiella ornithinolytica strain LYG_6_1B plasmid pLYG_6_1B_290Kb, whole genome shotgun sequence"
 Gentamicin,Spacer_Cluster_0,Predictor Relevante (SHAP),,0.0,,,,,
 Gentamicin,Spacer_Cluster_2,Predictor Relevante (SHAP),,0.0,,,,,
 Gentamicin,Spacer_Cluster_220,Predictor Relevante (SHAP),,0.0,,,,,
-Gentamicin,Spacer_Cluster_230,Predictor Relevante (SHAP),,0.0,,,,,
-Gentamicin,Spacer_Cluster_234,Predictor Relevante (SHAP),,0.0,,,,,
-Gentamicin,Spacer_Cluster_245,Predictor Relevante (SHAP),,0.0,,,,,
-Gentamicin,Spacer_Cluster_249,Predictor Relevante (SHAP),,0.0,,,,,
-Gentamicin,Spacer_Cluster_254,Predictor Relevante (SHAP),,0.0,,,,,
-Gentamicin,Spacer_Cluster_266,Predictor Relevante (SHAP),,0.0,,,,,
-Gentamicin,Spacer_Cluster_267,Predictor Relevante (SHAP),,0.0,,,,,
-Gentamicin,Spacer_Cluster_268,Predictor Relevante (SHAP),,0.0,,,,,
-Gentamicin,Spacer_Cluster_269,Predictor Relevante (SHAP),,0.0,,,,,
+Gentamicin,Spacer_Cluster_230,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_234,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRYHH010000001.1 Klebsiella pneumoniae strain KP4 plasmid pKP4_p1, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_245,Predictor Relevante (SHAP),,0.0,100.0,41.0,5.82e-15,81.8,"NZ_NTGK01000110.1 Klebsiella pneumoniae strain B04 map unlocalized plasmid pB04 P51, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_249,Predictor Relevante (SHAP),,0.0,100.0,40.0,2.2e-14,79.8,"NZ_JBRTYH010000002.1 Klebsiella pneumoniae strain KP6 plasmid pKP6-pls1, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_254,Predictor Relevante (SHAP),,0.0,100.0,39.0,8.33e-14,77.8,"NZ_JBRTYH010000002.1 Klebsiella pneumoniae strain KP6 plasmid pKP6-pls1, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_266,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_267,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_268,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Gentamicin,Spacer_Cluster_269,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
 Imipenem,Spacer_Cluster_213,Protector (Sensibilidad),0.7009795458483892,0.0011247216,,,,,
 Imipenem,Spacer_Cluster_14,Protector (Sensibilidad),0.7943915564106575,0.0,,,,,
-Imipenem,Spacer_Cluster_29,Protector (Sensibilidad),0.851973940911974,0.00031031115,,,,,
+Imipenem,Spacer_Cluster_29,Protector (Sensibilidad),0.851973940911974,0.00031031115,85.417,96.0,9.58e-14,79.8,"NZ_JACGYC010000002.1 Staphylococcus aureus strain SA2028 map unlocalized plasmid unnamed NODE_2_length_578871_cov_33.101906, whole genome shotgun sequence"
 Imipenem,Spacer_Cluster_314,Protector (Sensibilidad),0.8562534978917326,,,,,,
 Imipenem,Spacer_Cluster_7,Protector (Sensibilidad),0.869838087369888,,,,,,
 Imipenem,Spacer_Cluster_110,Protector (Sensibilidad),0.8966660035181919,0.0,,,,,
-Imipenem,Spacer_Cluster_60,Protector (Sensibilidad),0.8976234764560546,,,,,,
+Imipenem,Spacer_Cluster_60,Protector (Sensibilidad),0.8976234764560546,,85.149,101.0,2.01e-14,81.8,"NZ_JBSJXU010000003.1 Enterococcus alishanensis strain JNUCC 77 plasmid unnamed2, whole genome shotgun sequence"
 Imipenem,Spacer_Cluster_257,Protector (Sensibilidad),0.9068493685354602,0.0,,,,,
-Imipenem,Spacer_Cluster_313,Protector (Sensibilidad),0.910366254001004,,,,,,
+Imipenem,Spacer_Cluster_313,Protector (Sensibilidad),0.910366254001004,,100.0,33.0,3.03e-10,65.9,"NZ_JBBPBW010000028.1 Klebsiella pneumoniae strain KPN_004 plasmid pIncFIB(K), whole genome shotgun sequence"
 Imipenem,Spacer_Cluster_2,Protector (Sensibilidad),0.9128378043680276,0.0,,,,,
 Imipenem,Spacer_Cluster_1,Protector (Sensibilidad),0.9216555032967548,0.0,,,,,
-Imipenem,Spacer_Cluster_67,Protector (Sensibilidad),0.9216555032967548,,,,,,
-Imipenem,Spacer_Cluster_270,Protector (Sensibilidad),0.9232499726496918,,,,,,
+Imipenem,Spacer_Cluster_67,Protector (Sensibilidad),0.9216555032967548,,89.535,86.0,8.16e-20,99.6,"NZ_JARYIA010000006.1 Staphylococcus aureus strain GE-MSSA34 plasmid unnamed2, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_270,Protector (Sensibilidad),0.9232499726496918,,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
 Imipenem,Spacer_Cluster_51,Protector (Sensibilidad),0.9339705904495958,,,,,,
 Imipenem,Spacer_Cluster_703,Protector (Sensibilidad),0.9490521116591036,,,,,,
 Imipenem,Spacer_Cluster_5,Protector (Sensibilidad),0.9491765328257422,,,,,,
-Imipenem,Spacer_Cluster_421,Protector (Sensibilidad),0.9700223642409516,,,,,,
-Imipenem,Spacer_Cluster_420,Riesgo (Resistencia),1.017255525095312,,,,,,
-Imipenem,Spacer_Cluster_293,Riesgo (Resistencia),1.0527457776805391,,,,,,
+Imipenem,Spacer_Cluster_421,Protector (Sensibilidad),0.9700223642409516,,100.0,36.0,4.44e-12,71.9,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_420,Riesgo (Resistencia),1.017255525095312,,100.0,36.0,4.44e-12,71.9,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_293,Riesgo (Resistencia),1.0527457776805391,,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
 Imipenem,Spacer_Cluster_220,Riesgo (Resistencia),1.0609065634177537,0.0,,,,,
-Imipenem,Spacer_Cluster_311,Riesgo (Resistencia),1.0976049488404886,,,,,,
-Imipenem,Spacer_Cluster_281,Riesgo (Resistencia),1.137987062529623,,,,,,
+Imipenem,Spacer_Cluster_311,Riesgo (Resistencia),1.0976049488404886,,100.0,38.0,3.14e-13,75.8,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_281,Riesgo (Resistencia),1.137987062529623,,97.368,38.0,7.66e-11,67.9,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
 Imipenem,Spacer_Cluster_0,Predictor Relevante (SHAP),,0.0,,,,,
-Imipenem,Spacer_Cluster_148,Predictor Relevante (SHAP),,0.0,,,,,
-Imipenem,Spacer_Cluster_221,Predictor Relevante (SHAP),,0.0,,,,,
-Imipenem,Spacer_Cluster_229,Predictor Relevante (SHAP),,0.0,,,,,
-Imipenem,Spacer_Cluster_230,Predictor Relevante (SHAP),,0.0,,,,,
-Imipenem,Spacer_Cluster_234,Predictor Relevante (SHAP),,0.0,,,,,
-Imipenem,Spacer_Cluster_245,Predictor Relevante (SHAP),,0.0,,,,,
-Imipenem,Spacer_Cluster_248,Predictor Relevante (SHAP),,0.0,,,,,
-Imipenem,Spacer_Cluster_249,Predictor Relevante (SHAP),,0.0,,,,,
-Imipenem,Spacer_Cluster_254,Predictor Relevante (SHAP),,0.0,,,,,
-Imipenem,Spacer_Cluster_265,Predictor Relevante (SHAP),,0.0,,,,,
-Imipenem,Spacer_Cluster_266,Predictor Relevante (SHAP),,0.0,,,,,
-Imipenem,Spacer_Cluster_267,Predictor Relevante (SHAP),,0.0,,,,,
-Imipenem,Spacer_Cluster_268,Predictor Relevante (SHAP),,0.0,,,,,
-Imipenem,Spacer_Cluster_269,Predictor Relevante (SHAP),,0.0,,,,,
-Meropenem,Spacer_Cluster_298,Protector (Sensibilidad),0.3972301207411735,,,,,,
-Meropenem,Spacer_Cluster_306,Protector (Sensibilidad),0.4216311767613263,0.0003054496,,,,,
+Imipenem,Spacer_Cluster_148,Predictor Relevante (SHAP),,0.0,87.302,63.0,1.06e-08,61.9,"NZ_JARYHW010000002.1 Staphylococcus aureus strain IT-MSSA51 plasmid unnamed, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_221,Predictor Relevante (SHAP),,0.0,100.0,45.0,2.69e-17,89.7,"NZ_JBRYHH010000001.1 Klebsiella pneumoniae strain KP4 plasmid pKP4_p1, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_229,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRTYI010000002.1 Klebsiella pneumoniae strain KP1 plasmid pKP1-rmpA2, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_230,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_234,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRYHH010000001.1 Klebsiella pneumoniae strain KP4 plasmid pKP4_p1, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_245,Predictor Relevante (SHAP),,0.0,100.0,41.0,5.82e-15,81.8,"NZ_NTGK01000110.1 Klebsiella pneumoniae strain B04 map unlocalized plasmid pB04 P51, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_248,Predictor Relevante (SHAP),,0.0,100.0,40.0,2.2e-14,79.8,"NZ_NTGK01000110.1 Klebsiella pneumoniae strain B04 map unlocalized plasmid pB04 P51, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_249,Predictor Relevante (SHAP),,0.0,100.0,40.0,2.2e-14,79.8,"NZ_JBRTYH010000002.1 Klebsiella pneumoniae strain KP6 plasmid pKP6-pls1, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_254,Predictor Relevante (SHAP),,0.0,100.0,39.0,8.33e-14,77.8,"NZ_JBRTYH010000002.1 Klebsiella pneumoniae strain KP6 plasmid pKP6-pls1, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_265,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_266,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_267,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_268,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Imipenem,Spacer_Cluster_269,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_298,Protector (Sensibilidad),0.3972301207411735,,100.0,33.0,3.03e-10,65.9,"NZ_JBSQHF010000002.1 Klebsiella pneumoniae strain L20 map unlocalized plasmid unnamed contig_3, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_306,Protector (Sensibilidad),0.4216311767613263,0.0003054496,100.0,38.0,3.14e-13,75.8,"NZ_JBPSJV010000002.1 Klebsiella variicola strain 5-4756 plasmid p_contig2, whole genome shotgun sequence"
 Meropenem,Spacer_Cluster_257,Protector (Sensibilidad),0.4280718031688012,0.0014322556,,,,,
-Meropenem,Spacer_Cluster_60,Protector (Sensibilidad),0.497124960996995,,,,,,
-Meropenem,Spacer_Cluster_333,Protector (Sensibilidad),0.5187643002882597,,,,,,
+Meropenem,Spacer_Cluster_60,Protector (Sensibilidad),0.497124960996995,,85.149,101.0,2.01e-14,81.8,"NZ_JBSJXU010000003.1 Enterococcus alishanensis strain JNUCC 77 plasmid unnamed2, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_333,Protector (Sensibilidad),0.5187643002882597,,96.97,33.0,7.38e-08,58.0,"NZ_JAMOLP010000004.1 Klebsiella pneumoniae strain Z0117KP0043 plasmid pZ0117KP0043-1, whole genome shotgun sequence"
 Meropenem,Spacer_Cluster_14,Protector (Sensibilidad),0.5287272742495864,0.00069489435,,,,,
 Meropenem,Spacer_Cluster_2,Protector (Sensibilidad),0.5436268571147899,0.0,,,,,
 Meropenem,Spacer_Cluster_1,Protector (Sensibilidad),0.560453265790157,0.0,,,,,
-Meropenem,Spacer_Cluster_275,Protector (Sensibilidad),0.5700956901357894,,,,,,
-Meropenem,Spacer_Cluster_269,Protector (Sensibilidad),0.5874504585272081,,,,,,
+Meropenem,Spacer_Cluster_275,Protector (Sensibilidad),0.5700956901357894,,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_269,Protector (Sensibilidad),0.5874504585272081,,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
 Meropenem,Spacer_Cluster_332,Protector (Sensibilidad),0.5902974410140607,,,,,,
-Meropenem,Spacer_Cluster_265,Protector (Sensibilidad),0.6012442543316595,0.0,,,,,
-Meropenem,Spacer_Cluster_421,Riesgo (Resistencia),1.1981524477238854,,,,,,
-Meropenem,Spacer_Cluster_148,Riesgo (Resistencia),1.2453362742639769,0.0,,,,,
-Meropenem,Spacer_Cluster_420,Riesgo (Resistencia),1.3440837199205589,,,,,,
-Meropenem,Spacer_Cluster_282,Riesgo (Resistencia),1.3556657257329594,,,,,,
-Meropenem,Spacer_Cluster_310,Riesgo (Resistencia),1.5111289890092852,,,,,,
+Meropenem,Spacer_Cluster_265,Protector (Sensibilidad),0.6012442543316595,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_421,Riesgo (Resistencia),1.1981524477238854,,100.0,36.0,4.44e-12,71.9,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_148,Riesgo (Resistencia),1.2453362742639769,0.0,87.302,63.0,1.06e-08,61.9,"NZ_JARYHW010000002.1 Staphylococcus aureus strain IT-MSSA51 plasmid unnamed, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_420,Riesgo (Resistencia),1.3440837199205589,,100.0,36.0,4.44e-12,71.9,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_282,Riesgo (Resistencia),1.3556657257329594,,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_310,Riesgo (Resistencia),1.5111289890092852,,100.0,38.0,3.14e-13,75.8,"NZ_JBQTGO010000002.1 Klebsiella ornithinolytica strain LYG_6_1B plasmid pLYG_6_1B_290Kb, whole genome shotgun sequence"
 Meropenem,Spacer_Cluster_51,Riesgo (Resistencia),1.5792584851012283,,,,,,
 Meropenem,Spacer_Cluster_220,Riesgo (Resistencia),2.137225337277969,0.0057534003,,,,,
-Meropenem,Spacer_Cluster_229,Riesgo (Resistencia),2.267787505491795,0.0,,,,,
-Meropenem,Spacer_Cluster_249,Riesgo (Resistencia),2.360185516163445,0.0070668575,,,,,
-Meropenem,Spacer_Cluster_281,Riesgo (Resistencia),3.0190523547619703,0.0040013622,,,,,
+Meropenem,Spacer_Cluster_229,Riesgo (Resistencia),2.267787505491795,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRTYI010000002.1 Klebsiella pneumoniae strain KP1 plasmid pKP1-rmpA2, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_249,Riesgo (Resistencia),2.360185516163445,0.0070668575,100.0,40.0,2.2e-14,79.8,"NZ_JBRTYH010000002.1 Klebsiella pneumoniae strain KP6 plasmid pKP6-pls1, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_281,Riesgo (Resistencia),3.0190523547619703,0.0040013622,97.368,38.0,7.66e-11,67.9,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
 Meropenem,Spacer_Cluster_0,Predictor Relevante (SHAP),,0.0,,,,,
 Meropenem,Spacer_Cluster_110,Predictor Relevante (SHAP),,0.0,,,,,
 Meropenem,Spacer_Cluster_213,Predictor Relevante (SHAP),,0.0,,,,,
-Meropenem,Spacer_Cluster_221,Predictor Relevante (SHAP),,0.0,,,,,
-Meropenem,Spacer_Cluster_230,Predictor Relevante (SHAP),,0.0,,,,,
-Meropenem,Spacer_Cluster_234,Predictor Relevante (SHAP),,0.0,,,,,
-Meropenem,Spacer_Cluster_245,Predictor Relevante (SHAP),,0.0,,,,,
-Meropenem,Spacer_Cluster_248,Predictor Relevante (SHAP),,0.0,,,,,
-Meropenem,Spacer_Cluster_266,Predictor Relevante (SHAP),,0.0,,,,,
-Meropenem,Spacer_Cluster_267,Predictor Relevante (SHAP),,0.0,,,,,
-Meropenem,Spacer_Cluster_268,Predictor Relevante (SHAP),,0.0,,,,,
-Meropenem,Spacer_Cluster_29,Predictor Relevante (SHAP),,0.0031505465,,,,,
+Meropenem,Spacer_Cluster_221,Predictor Relevante (SHAP),,0.0,100.0,45.0,2.69e-17,89.7,"NZ_JBRYHH010000001.1 Klebsiella pneumoniae strain KP4 plasmid pKP4_p1, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_230,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_234,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRYHH010000001.1 Klebsiella pneumoniae strain KP4 plasmid pKP4_p1, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_245,Predictor Relevante (SHAP),,0.0,100.0,41.0,5.82e-15,81.8,"NZ_NTGK01000110.1 Klebsiella pneumoniae strain B04 map unlocalized plasmid pB04 P51, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_248,Predictor Relevante (SHAP),,0.0,100.0,40.0,2.2e-14,79.8,"NZ_NTGK01000110.1 Klebsiella pneumoniae strain B04 map unlocalized plasmid pB04 P51, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_266,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_267,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_268,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Meropenem,Spacer_Cluster_29,Predictor Relevante (SHAP),,0.0031505465,85.417,96.0,9.58e-14,79.8,"NZ_JACGYC010000002.1 Staphylococcus aureus strain SA2028 map unlocalized plasmid unnamed NODE_2_length_578871_cov_33.101906, whole genome shotgun sequence"
 Trimethoprim_sulfamethoxazole,Spacer_Cluster_0,Predictor Relevante (SHAP),,0.0,,,,,
 Trimethoprim_sulfamethoxazole,Spacer_Cluster_1,Predictor Relevante (SHAP),,0.0,,,,,
 Trimethoprim_sulfamethoxazole,Spacer_Cluster_110,Predictor Relevante (SHAP),,0.0,,,,,
 Trimethoprim_sulfamethoxazole,Spacer_Cluster_14,Predictor Relevante (SHAP),,0.0,,,,,
-Trimethoprim_sulfamethoxazole,Spacer_Cluster_148,Predictor Relevante (SHAP),,0.0,,,,,
+Trimethoprim_sulfamethoxazole,Spacer_Cluster_148,Predictor Relevante (SHAP),,0.0,87.302,63.0,1.06e-08,61.9,"NZ_JARYHW010000002.1 Staphylococcus aureus strain IT-MSSA51 plasmid unnamed, whole genome shotgun sequence"
 Trimethoprim_sulfamethoxazole,Spacer_Cluster_2,Predictor Relevante (SHAP),,0.0,,,,,
 Trimethoprim_sulfamethoxazole,Spacer_Cluster_213,Predictor Relevante (SHAP),,0.0002633549,,,,,
 Trimethoprim_sulfamethoxazole,Spacer_Cluster_220,Predictor Relevante (SHAP),,0.0,,,,,
-Trimethoprim_sulfamethoxazole,Spacer_Cluster_221,Predictor Relevante (SHAP),,0.0,,,,,
-Trimethoprim_sulfamethoxazole,Spacer_Cluster_229,Predictor Relevante (SHAP),,0.0,,,,,
-Trimethoprim_sulfamethoxazole,Spacer_Cluster_230,Predictor Relevante (SHAP),,0.0,,,,,
-Trimethoprim_sulfamethoxazole,Spacer_Cluster_234,Predictor Relevante (SHAP),,0.0,,,,,
-Trimethoprim_sulfamethoxazole,Spacer_Cluster_245,Predictor Relevante (SHAP),,7.199872e-05,,,,,
-Trimethoprim_sulfamethoxazole,Spacer_Cluster_248,Predictor Relevante (SHAP),,0.0,,,,,
-Trimethoprim_sulfamethoxazole,Spacer_Cluster_249,Predictor Relevante (SHAP),,0.0062580644,,,,,
-Trimethoprim_sulfamethoxazole,Spacer_Cluster_254,Predictor Relevante (SHAP),,0.0,,,,,
+Trimethoprim_sulfamethoxazole,Spacer_Cluster_221,Predictor Relevante (SHAP),,0.0,100.0,45.0,2.69e-17,89.7,"NZ_JBRYHH010000001.1 Klebsiella pneumoniae strain KP4 plasmid pKP4_p1, whole genome shotgun sequence"
+Trimethoprim_sulfamethoxazole,Spacer_Cluster_229,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRTYI010000002.1 Klebsiella pneumoniae strain KP1 plasmid pKP1-rmpA2, whole genome shotgun sequence"
+Trimethoprim_sulfamethoxazole,Spacer_Cluster_230,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Trimethoprim_sulfamethoxazole,Spacer_Cluster_234,Predictor Relevante (SHAP),,0.0,100.0,43.0,3.88e-16,85.7,"NZ_JBRYHH010000001.1 Klebsiella pneumoniae strain KP4 plasmid pKP4_p1, whole genome shotgun sequence"
+Trimethoprim_sulfamethoxazole,Spacer_Cluster_245,Predictor Relevante (SHAP),,7.199872e-05,100.0,41.0,5.82e-15,81.8,"NZ_NTGK01000110.1 Klebsiella pneumoniae strain B04 map unlocalized plasmid pB04 P51, whole genome shotgun sequence"
+Trimethoprim_sulfamethoxazole,Spacer_Cluster_248,Predictor Relevante (SHAP),,0.0,100.0,40.0,2.2e-14,79.8,"NZ_NTGK01000110.1 Klebsiella pneumoniae strain B04 map unlocalized plasmid pB04 P51, whole genome shotgun sequence"
+Trimethoprim_sulfamethoxazole,Spacer_Cluster_249,Predictor Relevante (SHAP),,0.0062580644,100.0,40.0,2.2e-14,79.8,"NZ_JBRTYH010000002.1 Klebsiella pneumoniae strain KP6 plasmid pKP6-pls1, whole genome shotgun sequence"
+Trimethoprim_sulfamethoxazole,Spacer_Cluster_254,Predictor Relevante (SHAP),,0.0,100.0,39.0,8.33e-14,77.8,"NZ_JBRTYH010000002.1 Klebsiella pneumoniae strain KP6 plasmid pKP6-pls1, whole genome shotgun sequence"
 Trimethoprim_sulfamethoxazole,Spacer_Cluster_257,Predictor Relevante (SHAP),,0.0,,,,,
-Trimethoprim_sulfamethoxazole,Spacer_Cluster_265,Predictor Relevante (SHAP),,0.0,,,,,
-Trimethoprim_sulfamethoxazole,Spacer_Cluster_266,Predictor Relevante (SHAP),,0.0,,,,,
-Trimethoprim_sulfamethoxazole,Spacer_Cluster_267,Predictor Relevante (SHAP),,0.0,,,,,
-Trimethoprim_sulfamethoxazole,Spacer_Cluster_268,Predictor Relevante (SHAP),,0.0,,,,,
-Trimethoprim_sulfamethoxazole,Spacer_Cluster_29,Predictor Relevante (SHAP),,0.0092861205,,,,,
-Trimethoprim_sulfamethoxazole,Spacer_Cluster_336,Predictor Relevante (SHAP),,0.00057212915,,,,,
+Trimethoprim_sulfamethoxazole,Spacer_Cluster_265,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBRYYQ010000003.1 Klebsiella pneumoniae strain MBI-24-2 plasmid pMBI24-2-1, whole genome shotgun sequence"
+Trimethoprim_sulfamethoxazole,Spacer_Cluster_266,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Trimethoprim_sulfamethoxazole,Spacer_Cluster_267,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Trimethoprim_sulfamethoxazole,Spacer_Cluster_268,Predictor Relevante (SHAP),,0.0,100.0,38.0,3.14e-13,75.8,"NZ_JBSKBN010000002.1 Klebsiella pneumoniae strain RC_863 plasmid unnamed1, whole genome shotgun sequence"
+Trimethoprim_sulfamethoxazole,Spacer_Cluster_29,Predictor Relevante (SHAP),,0.0092861205,85.417,96.0,9.58e-14,79.8,"NZ_JACGYC010000002.1 Staphylococcus aureus strain SA2028 map unlocalized plasmid unnamed NODE_2_length_578871_cov_33.101906, whole genome shotgun sequence"
+Trimethoprim_sulfamethoxazole,Spacer_Cluster_336,Predictor Relevante (SHAP),,0.00057212915,100.0,37.0,1.18e-12,73.8,"NZ_NTGK01000110.1 Klebsiella pneumoniae strain B04 map unlocalized plasmid pB04 P51, whole genome shotgun sequence"
